@@ -5,7 +5,6 @@ import { faFacebook, faLinkedin, faInstagram, faSquareTwitter, faGithub } from "
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { Outlet, Link, useLocation, useNavigate } from "react-router-dom";
 import "./Navbar.css";
-import logo from "../../assets/logo.png";
 import Footer from "../Footer/Footer";
 
 function Navbar() {
@@ -49,7 +48,7 @@ function Navbar() {
         <>
             <div className={`nav ${isScrolled ? 'scrolled' : ''}`}>
                 <div className="bottomside">
-                    <div className="brand" onClick={() => navigate('/')}>DataAI Solutions</div>
+                    <div className="brand" onClick={() => navigate('/')}>DataLync</div>
                     <button className="hamburger" onClick={handleMenuToggle} aria-label="Toggle menu">
                         <FontAwesomeIcon icon={menuOpen ? faTimes : faBars} />
                     </button>

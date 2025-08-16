@@ -6,6 +6,7 @@ import { faEnvelope, faPhone, faLocationDot, faArrowRight } from "@fortawesome/f
 import { Link, useLocation } from "react-router-dom";
 import logo from "../../assets/logo.png";
 
+
 function Footer() {
   const location = useLocation();
   useEffect(() => {
@@ -53,21 +54,21 @@ function Footer() {
                 <div className="icon"><FontAwesomeIcon icon={faEnvelope} /></div>
                 <div>
                   <div className="label">Email</div>
-                  <div className="value">hello@dataaisolutions.com</div>
+                  <div className="value">harshilkothiya5@gmail.com</div>
                 </div>
               </div>
               <div className="info-row">
                 <div className="icon"><FontAwesomeIcon icon={faPhone} /></div>
                 <div>
                   <div className="label">Phone</div>
-                  <div className="value">+1 (555) 123-4567</div>
+                  <div className="value">+91 8469409852</div>
                 </div>
               </div>
               <div className="info-row">
                 <div className="icon"><FontAwesomeIcon icon={faLocationDot} /></div>
                 <div>
                   <div className="label">Location</div>
-                  <div className="value">San Francisco, CA</div>
+                  <div className="value">Surat, Gujarat</div>
                 </div>
               </div>
             </div>
@@ -141,7 +142,7 @@ function Footer() {
             <Link to="/portfolio" onClick={() => window.scrollTo(0, 0)}>Case Studies</Link>
           </div>
         </div>
-        <div className="footer-bottom">Copyright © 2024 DataAI Solutions. All Rights Reserved.</div>
+        <div className="footer-bottom">Copyright © 2024 DataLync. All Rights Reserved.</div>
       </footer>
     </>
   );
