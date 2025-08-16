@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react'
 import './About.css';
 import harshil from '../../assets/harshil.jpg';
 import rutvik from '../../assets/rutvik.jpg';
-import Footer from '../../Components/Footer/Footer';
+import aryan from '../../assets/aryan.jpg';
 import { useNavigate } from 'react-router-dom';
 import  Stats  from '../HomePage/Stats/Stats';
 
@@ -26,13 +26,13 @@ const teamMembers = [
     education: "Information Technology"
   },
   {
-    name: "Alex Johnson",
+    name: "Aryan Kothiya",
     role: "Senior Developer",
-    image: harshil, // Using existing image as placeholder
+    image: aryan, // Using existing image as placeholder
     description: "A passionate developer with expertise in modern web technologies and mobile app development. Alex brings creativity and technical skills to deliver exceptional user experiences.",
     skills: ["React Development", "Mobile App Development", "UI/UX Design", "API Integration"],
     experience: "3+ Years",
-    education: "Software Engineering"
+    education: "Computer Science"
   }
 ];
 
@@ -113,7 +113,7 @@ function About() {
             <div className="timeline-item fade-in-left">
               <div className="timeline-marker">
                 <div className="marker-icon">🚀</div>
-                <div className="marker-line"></div>
+                {/* <div className="marker-line"></div> */}
               </div>
               <div className="timeline-content">
                 <div className="timeline-year">2020</div>
