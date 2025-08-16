@@ -1,0 +1,585 @@
+/* --- Portfolio Page Styles --- */
+@import url('../Services/Services.css');
+
+.portfolio-page {
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  color: #000;
+  background: #fff;
+}
+
+/* portfolio-hero Section */
+.portfolio-hero {
+  background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #2d2d2d 100%);
+  padding: 80px 40px 60px 40px;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.portfolio-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(120, 219, 255, 0.05) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.portfolio-hero::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.03) 50%, transparent 70%);
+  animation: shimmer 8s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0%, 100% { transform: translateX(-100%); }
+  50% { transform: translateX(100%); }
+}
+
+.portfolio-hero-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: heroFadeIn 1.2s ease-out forwards;
+}
+
+@keyframes heroFadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.portfolio-hero-title {
+  font-size: 3.5rem;
+  font-weight: 900;
+  background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 50%, #e0e0e0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 1rem;
+  line-height: 1.1;
+  letter-spacing: 2px;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  animation: titleSlideIn 1s ease-out 0.3s both;
+}
+
+@keyframes titleSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-30px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.portfolio-hero-title span {
+  background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 50%, #e0e0e0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  position: relative;
+}
+
+.portfolio-hero-title span::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #ffffff, #f0f0f0, #e0e0e0);
+  border-radius: 2px;
+  transform: scaleX(0);
+  animation: underlineExpand 1s ease-out 1s forwards;
+}
+
+@keyframes underlineExpand {
+  to {
+    transform: scaleX(1);
+  }
+}
+
+.portfolio-hero-subtitle {
+  font-size: 1.25rem;
+  color: #e0e0e0;
+  line-height: 1.6;
+  text-align: center;
+  max-width: 90%;
+  margin: 0 auto;
+  opacity: 0;
+  animation: subtitleFadeIn 1s ease-out 0.8s forwards;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
+
+@keyframes subtitleFadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Portfolio Section */
+.portfolio-section {
+  padding: 1rem;
+  background: #fff;
+}
+
+.portfolio-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 900;
+  text-align: center;
+  margin-bottom: 60px;
+  background: linear-gradient(90deg, #000, #3e3f41 80%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: 1px;
+}
+
+/* Projects Grid */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 30px;
+}
+
+/* Project Card */
+.project-card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  border: 1px solid #e8e8e8;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  position: relative;
+  cursor: pointer;
+}
+
+.project-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.1), transparent);
+  transition: left 0.6s ease;
+  z-index: 1;
+}
+
+.project-card:hover::before {
+  left: 100%;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  border-color: #000;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+/* Project Image Container */
+.project-image-container {
+  position: relative;
+  height: 250px;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.project-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-image {
+  transform: none;
+}
+
+.project-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 100%);
+  display: flex;
+  align-items: flex-end;
+  padding: 20px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 3;
+}
+
+.project-card:hover .project-overlay {
+  opacity: 1;
+}
+
+.project-category {
+  background: rgba(255, 255, 255, 0.95);
+  color: #000;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* Project Content */
+.project-content {
+  padding: 30px;
+  position: relative;
+  z-index: 2;
+}
+
+.project-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 15px;
+  letter-spacing: 0.5px;
+}
+
+.project-description {
+  color: #666;
+  line-height: 1.7;
+  margin-bottom: 25px;
+  font-size: 1rem;
+}
+
+/* Technologies Section */
+.project-technologies {
+  margin-bottom: 25px;
+}
+
+.project-technologies h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 12px;
+}
+
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tech-tag {
+  background: #f8f9fa;
+  color: #000;
+  padding: 6px 12px;
+  border-radius: 15px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  border: 1px solid #e0e0e0;
+  transition: all 0.3s ease;
+}
+
+.tech-tag:hover {
+  background: #000;
+  color: #fff;
+}
+
+/* Features Section */
+.project-features h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 12px;
+}
+
+.feature-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.feature-tag {
+  background: #f0f0f0;
+  color: #000;
+  padding: 6px 12px;
+  border-radius: 15px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  border: 1px solid #d0d0d0;
+  transition: all 0.3s ease;
+}
+
+.feature-tag:hover {
+  background: #000;
+  color: #fff;
+  border-color: #000;
+}
+
+
+/* Animations */
+@keyframes fadeInLeft {
+  from { opacity: 0; transform: translateX(-50px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideInDown {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Scroll Animation Classes */
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease-out;
+}
+
+.fade-in-up.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-in-left {
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: all 0.6s ease-out;
+}
+
+.fade-in-left.animate {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.fade-in-right {
+  opacity: 0;
+  transform: translateX(30px);
+  transition: all 0.6s ease-out;
+}
+
+.fade-in-right.animate {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.fade-in-scale {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: all 0.6s ease-out;
+}
+
+.fade-in-scale.animate {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Staggered Animation Delays */
+.stagger-1 { transition-delay: 0.1s; }
+.stagger-2 { transition-delay: 0.2s; }
+.stagger-3 { transition-delay: 0.3s; }
+.stagger-4 { transition-delay: 0.4s; }
+.stagger-5 { transition-delay: 0.5s; }
+.stagger-6 { transition-delay: 0.6s; }
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .projects-grid {
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .portfolio-hero-title {
+    font-size: 2rem;
+  }
+  
+  .portfolio-hero-subtitle {
+    font-size: 16px;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .project-content {
+    padding: 20px;
+  }
+  
+  .stat-number {
+    font-size: 2.5rem;
+  }
+  
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .cta-button {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .portfolio-portfolio-hero {
+    padding: 20px 20px 30px 20px;
+  }
+  
+  .stats-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  
+  .stat-card {
+    padding: 30px 15px;
+  }
+  
+  .stat-number {
+    font-size: 2rem;
+  }
+  
+  .stat-label {
+    font-size: 1rem;
+  }
+  
+  .project-image-container {
+    height: 200px;
+  }
+  
+  .project-title {
+    font-size: 1.3rem;
+  }
+}
+
+/* Responsive Portfolio Hero Section */
+@media (max-width: 1200px) {
+  .portfolio-hero {
+    padding: 70px 30px 50px 30px;
+    min-height: 55vh;
+  }
+  
+  .portfolio-hero-title {
+    font-size: 3rem;
+    letter-spacing: 1.5px;
+  }
+  
+  .portfolio-hero-subtitle {
+    font-size: 1.2rem;
+    max-width: 85%;
+  }
+}
+
+@media (max-width: 900px) {
+  .portfolio-hero {
+    padding: 60px 25px 40px 25px;
+    min-height: 50vh;
+  }
+  
+  .portfolio-hero-title {
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+    margin-bottom: 0.8rem;
+  }
+  
+  .portfolio-hero-subtitle {
+    font-size: 1.1rem;
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .portfolio-hero {
+    padding: 50px 20px 35px 20px;
+    min-height: 45vh;
+  }
+  
+  .portfolio-hero-title {
+    font-size: 2.2rem;
+    letter-spacing: 0.8px;
+    margin-bottom: 0.7rem;
+  }
+  
+  .portfolio-hero-subtitle {
+    font-size: 1rem;
+    max-width: 95%;
+    line-height: 1.5;
+  }
+  
+  .portfolio-hero-title span::after {
+    height: 2px;
+    bottom: -3px;
+  }
+}
+
+@media (max-width: 480px) {
+  .portfolio-hero {
+    padding: 40px 15px 30px 15px;
+    min-height: 40vh;
+  }
+  
+  .portfolio-hero-title {
+    font-size: 1.8rem;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.6rem;
+  }
+  
+  .portfolio-hero-subtitle {
+    font-size: 0.95rem;
+    max-width: 100%;
+    line-height: 1.4;
+  }
+  
+  .portfolio-hero-title span::after {
+    height: 2px;
+    bottom: -2px;
+  }
+}
+
+@media (max-width: 360px) {
+  .portfolio-hero {
+    padding: 35px 12px 25px 12px;
+    min-height: 35vh;
+  }
+  
+  .portfolio-hero-title {
+    font-size: 1.6rem;
+    letter-spacing: 0.3px;
+  }
+  
+  .portfolio-hero-subtitle {
+    font-size: 0.9rem;
+  }
+}

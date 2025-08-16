@@ -1,0 +1,80 @@
+.container5{
+    min-height: 70vh;
+    padding-top: 70px;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.heading5 h1{
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 2rem;
+    line-height: 1.2;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .container5 {
+        padding-top: 60px;
+    }
+    
+    .heading5 h1 {
+        font-size: 2.25rem;
+    }
+}
+
+@media (max-width: 900px) {
+    .container5 {
+        padding-top: 50px;
+        min-height: 60vh;
+    }
+    
+    .heading5 h1 {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .container5 {
+        padding-top: 40px;
+        padding-left: 12px;
+        padding-right: 12px;
+        min-height: 50vh;
+    }
+    
+    .heading5 h1 {
+        font-size: 1.75rem;
+        margin-bottom: 1.25rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container5 {
+        padding-top: 30px;
+        padding-left: 8px;
+        padding-right: 8px;
+        min-height: 40vh;
+    }
+    
+    .heading5 h1 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        line-height: 1.3;
+    }
+}
+
+@media (max-width: 360px) {
+    .container5 {
+        padding-top: 25px;
+        padding-left: 6px;
+        padding-right: 6px;
+    }
+    
+    .heading5 h1 {
+        font-size: 1.25rem;
+        margin-bottom: 0.75rem;
+    }
+}

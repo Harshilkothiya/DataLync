@@ -1,0 +1,577 @@
+/* New footer styles inspired by the reference, using site colors */
+.footer {
+    background: #000;
+    color: #e5e7eb;
+}
+
+/* Scroll reveal base */
+.reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(14px);
+    transition: opacity .3s ease, transform .3s ease;
+}
+
+.reveal-on-scroll.is-revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Contact CTA in light theme (to match reference) */
+.contact-cta {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    margin-left: auto;
+    margin-right: auto;
+    background: linear-gradient(180deg, #f8f9fa 0%, #ffffff 100%);
+}
+
+.cta-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+.cta-inner-title{
+    margin-bottom: 4rem;
+    text-align: center;
+}
+
+.cta-title {
+    margin-bottom: 1.5rem;
+    line-height: 1;
+    font-size: 3rem;
+    color: #000;
+    text-align: center;
+    font-weight: 800;
+}
+
+.cta-subtitle {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    color: #6b7280;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 48rem;
+}
+
+.cta-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    align-items: start;
+}
+
+.card {
+    padding: 2rem;
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(17, 24, 39, 0.06);
+    overflow: hidden;
+}
+
+.card-title {
+    color: #0f172a;
+    margin: 0 0 18px 0;
+    font-weight: 800;
+    font-size: 1.375rem;
+    line-height: 2rem;
+}
+
+.info-row {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    padding: 0.75rem;
+    cursor: pointer;
+}
+
+.info-row .icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #000;
+    padding: 0.2rem;
+    color: #fff;
+}
+
+.label {
+    padding:0.3rem;
+    color: #6b7280;
+    font-size: 17px;
+}
+
+.value {
+    color: #111827;
+    font-weight: 500;
+    padding-left:0.3rem;
+}
+
+.form-grid {
+    display: grid ;
+    grid-template-columns: 1fr 1fr ;
+    gap: 24px ;
+    margin-bottom: 16px ;
+}
+
+.form-grid > * {
+    min-width: 0 ;
+}
+
+.input,
+.textarea {
+    width: 100% ;
+    background: #f9fafb ;
+    color: #111827 ;
+    border: 1.5px solid #d1d5db ;
+    border-radius: 14px ;
+    padding: 14px 18px ;
+    outline: none ;
+    transition: border-color .2s ease, box-shadow .2s ease, transform .1s ease ;
+    font-size: 0.95rem ;
+    line-height: 1.4rem ;
+    animation: fieldIn .35s ease both ;
+    box-sizing: border-box ;
+    min-width: 0 ;
+    margin: 0 ;
+}
+
+.input:hover,
+.textarea:hover {
+    border-color: #d1d5db ;
+}
+
+.input::placeholder,
+.textarea::placeholder {
+    color: #9ca3af ;
+}
+
+.input:focus,
+.textarea:focus {
+    border-color: #0f172a ;
+    box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.10) ;
+    transform: translateY(-1px) ;
+}
+
+.textarea {
+    min-height: 140px ;
+    resize: vertical ;
+}
+
+/* top-to-bottom spacing for fields that are direct children (Subject and Message) */
+
+.form-card > .textarea {
+    margin-top: 16px ;
+}
+
+.form-card {
+    display: flex ;
+    flex-direction: column ;
+}
+
+.cta-submit {
+    margin-top: 18px ;
+    width: 100% ;
+    background: #0a0a0a ;
+    color: #fff ;
+    border: 1px solid #0a0a0a ;
+    border-radius: 999px ;
+    padding: 14px 18px ;
+    font-weight: 800 ;
+    letter-spacing: .2px ;
+    display: flex ;
+    align-items: center ;
+    justify-content: center ;
+    gap: 10px ;
+    cursor: pointer ;
+    transition: transform .2s ease, box-shadow .2s ease, background .2s ease, color .2s ease ;
+    animation: fieldIn .5s ease both ;
+}
+
+.cta-submit:hover {
+    transform: translateY(-2px) ;
+    box-shadow: 0 14px 34px rgba(0, 0, 0, .18) ;
+}
+
+.cta-submit:active {
+    transform: translateY(0) scale(0.98) ;
+}
+
+/* simple entrance animation */
+@keyframes fieldIn {
+    from {
+        opacity: 0;
+        transform: translateY(6px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Footer Container */
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 56px 16px;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 28px;
+    align-items: flex-start;
+}
+
+.footer-brand img {
+    width: 180px;
+    height: auto;
+    margin-bottom: 18px;
+    filter: brightness(0) invert(1);
+}
+
+.footer-brand .tagline {
+    color: #9ca3af;
+    margin-bottom: 16px;
+    max-width: 320px;
+}
+
+.footer-social {
+    display: flex;
+    gap: 12px;
+}
+
+.footer-social a {
+    color: #fff;
+    background: transparent;
+    border: 1px solid #fff;
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    transition: transform .2s ease, background .2s ease, color .2s ease, border-color .2s ease;
+}
+
+.footer-social a:hover {
+    transform: translateY(-3px);
+    background: #fff;
+    color: #000;
+    border-color: #fff;
+}
+
+.footer-col h4 {
+    color: #fff;
+    font-weight: 800;
+    margin-bottom: 16px;
+    text-transform: capitalize;
+}
+
+.footer-col a {
+    display: block;
+    color: #9ca3af;
+    text-decoration: none;
+    margin: 10px 0;
+    transition: color .2s ease, transform .2s ease;
+}
+
+.footer-col a:hover {
+    color: #fff;
+    transform: translateX(4px);
+}
+
+.footer-bottom {
+    background: #000;
+    color: #9ca3af;
+    text-align: center;
+    padding: 14px 10px;
+    border-top: 1px solid #1f2937;
+}
+
+/* simple rating badges */
+.badges {
+    display: flex;
+    gap: 12px;
+    margin-top: 16px;
+}
+
+.badge {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 10px;
+    border: 1px solid #1f2937;
+    border-radius: 10px;
+    color: #e5e7eb;
+    font-weight: 600;
+    font-size: 14px;
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.badge .star {
+    color: #fbbf24;
+}
+
+.badge .sep {
+    color: #374151;
+}
+
+/* Responsive Design - Consolidated Media Queries */
+@media (max-width: 1200px) {
+    .footer-container {
+        grid-template-columns: 2fr 1fr 1fr;
+        gap: 24px;
+        padding: 48px 16px;
+    }
+    
+    .footer-col:last-child {
+        grid-column: 1 / -1;
+        text-align: center;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 900px) {
+    .cta-grid {
+        grid-template-columns: 1fr ;
+        gap: 20px ;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr ;
+        gap: 16px ;
+    }
+
+    .cta-title {
+        font-size: 2.5rem;
+    }
+    
+    .cta-subtitle {
+        font-size: 1.125rem;
+    }
+    
+    .card {
+        padding: 1.5rem;
+    }
+    
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 32px;
+        padding: 40px 16px;
+    }
+    
+    .footer-brand {
+        grid-column: 1 / -1;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    
+    .footer-brand .tagline {
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .footer-social {
+        justify-content: center;
+    }
+    
+    .badges {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-cta {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+    
+    .cta-inner-title {
+        margin-bottom: 3rem;
+    }
+    
+    .cta-title {
+        font-size: 2rem;
+    }
+    
+    .cta-subtitle {
+        font-size: 1rem;
+    }
+    
+    .cta-grid {
+        gap: 16px ;
+    }
+    
+    .card {
+        padding: 1.25rem;
+    }
+    
+    .form-grid {
+        gap: 12px ;
+    }
+    
+    .input,
+    .textarea {
+        padding: 12px 16px ;
+        font-size: 0.9rem ;
+    }
+    
+    .textarea {
+        min-height: 120px ;
+    }
+    
+    .cta-submit {
+        padding: 12px 16px ;
+        font-size: 0.9rem ;
+    }
+    
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        padding: 32px 16px;
+        text-align: center;
+    }
+    
+    .footer-col {
+        margin-bottom: 20px;
+    }
+    
+    .footer-col:last-child {
+        margin-bottom: 0;
+    }
+    
+    .footer-social {
+        justify-content: center;
+    }
+    
+    .badges {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-cta {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+    
+    .cta-inner {
+        padding: 0 12px;
+    }
+    
+    .cta-inner-title {
+        margin-bottom: 2rem;
+    }
+    
+    .cta-title {
+        font-size: 1.75rem;
+    }
+    
+    .cta-subtitle {
+        font-size: 0.9rem;
+    }
+    
+    .cta-grid {
+        gap: 12px ;
+    }
+    
+    .card {
+        padding: 1rem;
+    }
+    
+    .form-grid {
+        gap: 10px ;
+    }
+    
+    .input,
+    .textarea {
+        padding: 10px 14px ;
+        font-size: 0.85rem ;
+    }
+    
+    .textarea {
+        min-height: 100px ;
+    }
+    
+    .cta-submit {
+        padding: 10px 14px ;
+        font-size: 0.85rem ;
+    }
+    
+    .footer-container {
+        padding: 24px 12px;
+    }
+    
+    .footer-brand img {
+        width: 140px;
+    }
+    
+    .footer-social a {
+        width: 32px;
+        height: 32px;
+    }
+    
+    .badge {
+        font-size: 12px;
+        padding: 4px 8px;
+    }
+}
+
+@media (max-width: 360px) {
+    .contact-cta {
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
+    
+    .cta-inner {
+        padding: 0 8px;
+    }
+    
+    .cta-title {
+        font-size: 1.5rem;
+    }
+    
+    .cta-subtitle {
+        font-size: 0.8rem;
+    }
+    
+    .card {
+        padding: 0.75rem;
+    }
+    
+    .form-grid {
+        gap: 8px ;
+    }
+    
+    .input,
+    .textarea {
+        padding: 8px 12px ;
+        font-size: 0.8rem ;
+    }
+    
+    .textarea {
+        min-height: 80px ;
+    }
+    
+    .cta-submit {
+        padding: 8px 12px ;
+        font-size: 0.8rem ;
+    }
+    
+    .footer-container {
+        padding: 20px 8px;
+    }
+    
+    .footer-brand img {
+        width: 120px;
+    }
+    
+    .footer-social a {
+        width: 28px;
+        height: 28px;
+    }
+}

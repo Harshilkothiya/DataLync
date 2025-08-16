@@ -1,0 +1,263 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: white;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.bottomside {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 100px;
+  min-height: 70px;
+}
+
+.brand{
+  font-weight: 800;
+  font-size: 22px;
+  cursor: pointer;
+  color: #000;
+  text-decoration: none;
+}
+
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #000;
+  z-index: 1100;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+}
+
+.menu ul {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  list-style: none;
+}
+
+.menu ul li {
+  list-style: none;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: #6b7280;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 8px 0;
+  transition: all 0.3s ease;
+  position: relative;
+  cursor: pointer;
+}
+
+.menu ul li a:hover {
+  color: #000;
+  transform: translateY(-1px);
+}
+
+.menu ul li a:not(#contact).active {
+  color: #000;
+  font-weight: 600;
+}
+
+.menu ul li a#contact,
+.menu ul li a.contact-link {
+  background-color: #000;
+  color: #fff;
+  font-weight: 500;
+  padding: 12px 24px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  border: 2px solid #000;
+}
+
+.menu ul li a#contact:hover,
+.menu ul li a.contact-link:hover {
+  background-color: #333;
+  border-color: #333;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.outlet{
+  margin-top: 70px;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .bottomside {
+    padding: 0 20px;
+    min-height: 60px;
+  }
+  
+  .brand {
+    font-size: 20px;
+  }
+  
+  .menu ul {
+    gap: 30px;
+  }
+  
+  .menu ul li a {
+    font-size: 15px;
+  }
+  
+  .menu ul li a#contact {
+    padding: 10px 20px;
+  }
+  
+  .hamburger {
+    display: block;
+    font-size: 2.2rem;
+    padding: 10px 14px;
+    border-radius: 8px;
+    background: none;
+    border: none;
+    z-index: 1300;
+    margin-left: auto;
+  }
+  
+  .menu {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 100vw;
+    background: #fff;
+    box-shadow: 0 8px 24px 0 rgba(0,0,0,0.10);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 0 20px 0;
+    z-index: 1200;
+    display: none;
+    transition: max-height 0.4s cubic-bezier(0.4,0,0.2,1), opacity 0.3s;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+  }
+  
+  .menu.open {
+    display: flex;
+    max-height: 600px;
+    opacity: 1;
+  }
+  
+  .menu ul {
+    flex-direction: column;
+    width: 100%;
+    gap: 0;
+    padding: 0;
+  }
+  
+  .menu ul li {
+    width: 100%;
+    text-align: left;
+  }
+  
+  .menu ul li a {
+    display: block;
+    width: 100%;
+    font-size: 18px;
+    padding: 20px 24px;
+    border-radius: 0;
+    border-bottom: 1px solid #eee;
+    text-align: left;
+    background: none;
+    margin: 0;
+    color: #374151;
+  }
+  
+  .menu ul li:last-child a {
+    border-bottom: none;
+  }
+  
+  .menu ul li a#contact {
+    margin: 18px 24px 0 24px;
+    border-radius: 8px;
+    width: auto;
+    padding: 12px 24px;
+    font-size: 16px;
+    text-align: center;
+    display: inline-block;
+  }
+  
+  .outlet {
+    margin-top: 60px;
+  }
+}
+
+@media (max-width: 600px) {
+  .bottomside {
+    padding: 0 16px;
+    min-height: 56px;
+  }
+  
+  .brand {
+    font-size: 18px;
+  }
+  
+  .menu {
+    top: 56px;
+  }
+  
+  .menu ul li a {
+    font-size: 16px;
+    padding: 16px 20px;
+  }
+  
+  .menu ul li a#contact {
+    font-size: 15px;
+    padding: 10px 20px;
+    margin: 16px 20px 0 20px;
+  }
+  
+  .outlet {
+    margin-top: 56px;
+  }
+}
+
+@media (max-width: 480px) {
+  .bottomside {
+    padding: 0 12px;
+    min-height: 52px;
+  }
+  
+  .brand {
+    font-size: 16px;
+  }
+  
+  .menu {
+    top: 52px;
+  }
+  
+  .menu ul li a {
+    font-size: 15px;
+    padding: 14px 16px;
+  }
+  
+  .menu ul li a#contact {
+    font-size: 14px;
+    padding: 8px 16px;
+    margin: 14px 16px 0 16px;
+  }
+  
+  .outlet {
+    margin-top: 52px;
+  }
+}

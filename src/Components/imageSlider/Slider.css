@@ -1,0 +1,32 @@
+.slidercontainer {
+    width: 90%;
+    max-width: 1200px;
+    overflow: hidden;
+    margin: 20px auto;
+    /* border: 2px solid #ccc; */
+    border-radius: 10px;
+}
+
+.trak {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+
+.item {
+    flex: 0 0 calc(100% / 6); /* Show 6 images */
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+
+.item img:hover {
+    transform: scale(1.10);
+    transition: transform 0.5s ease;
+}
