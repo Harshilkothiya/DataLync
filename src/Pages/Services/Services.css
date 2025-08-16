@@ -8,7 +8,7 @@
 /* services-hero Section */
 .services-services-hero {
   background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #2d2d2d 100%);
-  padding: 80px 40px 60px 40px;
+  padding: 0 40px 60px 40px;
   width: 100%;
   text-align: center;
   position: relative;
@@ -516,6 +516,9 @@
   }
 }
 @media (max-width: 1200px) {
+  .services-services-hero{
+    padding-left: 0px !important; 
+  }
   .services-services-hero, .services-section, .why-choose-section, .cta-section {
     padding-left: 1rem;
     padding-right: 1rem;
@@ -533,6 +536,9 @@
 }
 
 @media (max-width: 900px) {
+  .services-services-hero{
+    padding-left: 0px !important; 
+  }
   .services-container {
     max-width: 800px;
   }
@@ -551,8 +557,11 @@
 }
 
 @media (max-width: 768px) {
+  .services-services-hero{
+    padding-left: 0px !important; 
+  }
   .services-services-hero {
-    padding: 20px 20px 30px 20px;
+    padding: 0 20px 30px 20px;
   }
   .services-section {
     padding: 0 15px 60px 15px;
@@ -588,7 +597,7 @@
 
 @media (max-width: 480px) {
   .services-services-hero {
-    padding: 15px 15px 25px 15px;
+    padding: 0 15px 25px 15px;
   }
   .services-section {
     padding: 0 10px 50px 10px;
@@ -645,6 +654,9 @@
     font-size: 0.8rem;
     padding: 5px 10px;
   }
+  .services-services-hero{
+    padding-left: 0px !important; 
+  }
 }
 
 @media (max-width: 400px) {
@@ -652,7 +664,9 @@
     padding: 18px 12px 22px 12px;
     border-radius: 16px;
   }
-  
+  .services-services-hero{
+    padding-left: 0px !important; 
+  }
   .service-icon-wrapper {
     width: 55px;
     height: 55px;

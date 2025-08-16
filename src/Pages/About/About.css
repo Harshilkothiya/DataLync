@@ -11,7 +11,7 @@
 /* about Section */
 .about-about {
   background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #2d2d2d 100%);
-  padding: 80px 40px 60px 40px;
+  padding: 0px 40px 60px 40px;
   width: 100%;
   text-align: center;
   position: relative;
@@ -572,6 +572,7 @@
   height: 200px;
   overflow: hidden;
   padding-top: 10px;
+  padding-bottom: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1028,6 +1029,9 @@
 
 /* Responsive Design */
 @media (max-width: 1200px) {
+  .about-about{
+    padding-left: 0px !important;
+  }
   .team-grid {
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: 40px;
@@ -1040,6 +1044,9 @@
 }
 
 @media (max-width: 768px) {
+  .about-about{
+    padding-left: 0px !important;
+  }
   .about-title {
     font-size: 2rem;
   }
@@ -1092,7 +1099,7 @@
 
 @media (max-width: 480px) {
   .about-about {
-    padding: 40px 15px 30px 15px;
+    padding: 0px 15px 30px 15px;
     min-height: 40vh;
   }
 
@@ -1117,7 +1124,7 @@
 /* Responsive About Hero Section */
 @media (max-width: 1200px) {
   .about-about {
-    padding: 70px 30px 50px 30px;
+    padding: 0px 30px 50px 30px;
     min-height: 55vh;
   }
 
@@ -1134,7 +1141,7 @@
 
 @media (max-width: 900px) {
   .about-about {
-    padding: 60px 25px 40px 25px;
+    padding: 0px 25px 40px 25px;
     min-height: 50vh;
   }
 
@@ -1152,7 +1159,7 @@
 
 @media (max-width: 768px) {
   .about-about {
-    padding: 50px 20px 35px 20px;
+    padding: 0px 20px 35px 20px;
     min-height: 45vh;
   }
 
@@ -1176,7 +1183,7 @@
 
 @media (max-width: 480px) {
   .about-about {
-    padding: 40px 15px 30px 15px;
+    padding: 0px 15px 30px 15px;
     min-height: 40vh;
   }
 
@@ -1200,7 +1207,7 @@
 
 @media (max-width: 360px) {
   .about-about {
-    padding: 35px 12px 25px 12px;
+    padding: 0px 12px 25px 12px;
     min-height: 35vh;
   }
 

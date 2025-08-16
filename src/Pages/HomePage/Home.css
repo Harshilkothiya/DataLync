@@ -191,6 +191,7 @@ body {
 }
 
 .secondary-btn{
+    z-index: 10;
     border: 2px solid #0f0f0f;
 }
 
