@@ -54,7 +54,7 @@ function Footer() {
                 <div className="icon"><FontAwesomeIcon icon={faEnvelope} /></div>
                 <div>
                   <div className="label">Email</div>
-                  <div className="value">harshilkothiya5@gmail.com</div>
+                  <div className="value">datalync.tech@gmail.com</div>
                 </div>
               </div>
               <div className="info-row">
@@ -73,7 +73,7 @@ function Footer() {
               </div>
             </div>
 
-            <form className="card form-card reveal-on-scroll" action="https://formspree.io/f/xwpvjknp" method="POST">
+            <form className="card form-card reveal-on-scroll" action="https://formspree.io/f/mkgvwbow" method="POST">
               <h3 className="card-title">Send Message</h3>
               <div className="form-grid">
                 <input className="input" type="text" name="name" placeholder="Your Name" required />
